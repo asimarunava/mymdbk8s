@@ -1,0 +1,17 @@
+devglan:
+  kafka:
+    topic: first_topic
+
+
+spring:
+  kafka:
+    bootstrap-servers: localhost:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+    consumer:
+      group-id: mymdb-group
+      auto-offset-reset: earliest
+kafka:
+  topic:
+    boot: first_topic
